@@ -18,7 +18,7 @@
         "build:autoprefixer": "autoprefixer-cli css/style.css",
         "watch": "parallelshell \"npm run watch:sassprefixer\" \"npm run watch:browsersync\" ",
         "watch:sassprefixer": "onchange -d 100 sass/style.scss -- parallelshell \"node-sass --output-style expanded --source-map true -o css sass\" \"autoprefixer-cli css/style.css\" ",
-        "watch:browsersync": "browser-sync start --server --files css/style.css index.html"
+        "watch:browsersync": "browser-sync start --server --files css/*.css *.html --serveStatic \"./\""
     },
     "repository": {
         "type": "git",
